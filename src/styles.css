@@ -1,0 +1,79 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+    --yellow: #ffc600;
+  }
+  
+  html {
+    color: #444;
+    font-family: Cambria, Cochin, Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+  }
+  
+  p {
+    line-height: 1.8;
+  }
+  
+  img {
+    max-width: 100%;
+  }
+  
+  a {
+    color: black;
+    text-decoration: underline wavy var(--yellow);
+  }
+  
+  h1,
+  h2 {
+    font-size: 80px;
+    font-style: italic;
+    font-weight: 100;
+    margin: 0;
+  }
+  
+  .post {
+    display: grid;
+    max-width: 1000px;
+    margin: 200px auto;
+    grid-template-columns: 3fr 12fr 5fr;
+    grid-gap: 10px 20px;
+  }
+  
+  .post > * {
+    grid-column: 2 / -2;
+  }
+  
+  .post > figure {
+    margin: 0;
+    grid-column: 1 / -1;
+  }
+  
+  
+  figcaption {
+    font-size: 12px;
+  }
+  
+  .post > blockquote {
+    grid-column: 1 / -1;
+    font-size: 60px;
+    margin: 0;
+    font-style: italic;
+    text-align: center;
+  }
+  
+  .tip {
+    background: #EBEBEB;
+    padding: 10px;
+    grid-row: span 5;
+    align-self: start;
+  }
+  
+  .tip-left {
+    grid-column: 1 / span 1;
+    text-align: right;
+    border-right: 2px solid var(--yellow);
+  }
+  
+  .tip-right {
+    grid-column: span 1 / -1;
+    border-left: 2px solid var(--yellow);
+  }
