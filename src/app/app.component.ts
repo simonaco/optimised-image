@@ -1,20 +1,22 @@
-import { NgOptimizedImage, NgFor } from '@angular/common';
+import { NgOptimizedImage, NgFor, provideImgixLoader } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [NgOptimizedImage, NgFor],
+  providers: [provideImgixLoader('https://simona.imgix.net')],
   template: `
     <article class="post">
       <h2>Lorem Ipsum</h2>
       <figure>
         <img
-          ngSrc="https://simona.imgix.net/verona_sunset.jpg"
+          ngSrc="/verona_sunset.jpg"
           alt="Verona skyline"
           priority
           width="800"
           height="400"
+          [ngSrcset]="ngSrcset"
         />
         <figcaption>Sun setting over Verona</figcaption>
       </figure>
@@ -31,7 +33,13 @@ import { Component } from '@angular/core';
           placerat, volutpat sapien et, fringilla est. Etiam at ipsum elementum,
           vulputate massa quis, fermentum odio.
         </p>
-        <img [ngSrc]="image.src" [alt]="image.alt" width="800" height="400" />
+        <img
+          [ngSrc]="image.src"
+          [alt]="image.alt"
+          width="800"
+          height="400"
+          [ngSrcset]="ngSrcset"
+        />
       </div>
     </article>
   `,
@@ -39,24 +47,25 @@ import { Component } from '@angular/core';
 export class AppComponent {
   images = [
     {
-      src: 'https://simona.imgix.net/verona_sunset_2.jpg',
+      src: '/verona_sunset_2.jpg',
       alt: 'Verona skyline',
     },
     {
-      src: 'https://simona.imgix.net/castelsanpietro.jpeg',
+      src: '/castelsanpietro.jpeg',
       alt: 'Two ducks looking over Catel San Pietro',
     },
     {
-      src: 'https://simona.imgix.net/teatro_romano.jpeg',
+      src: '/teatro_romano.jpeg',
       alt: 'Teatro romano ruins',
     },
     {
-      src: 'https://simona.imgix.net/arena_0.jpeg',
+      src: '/arena_0.jpeg',
       alt: 'Arena di Verona with Italian flag projection',
     },
     {
-      src: 'https://simona.imgix.net/dolomites.jpg',
+      src: '/dolomites.jpg',
       alt: 'Dolomiti mountains covered in snow',
     },
   ];
+  ngSrcset = '640w, 750w, 828w, 1080w, 1200w, 1920w, 2048w, 3840w';
 }
