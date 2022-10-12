@@ -10,8 +10,11 @@ import { Component } from '@angular/core';
       <h2>Lorem Ipsum</h2>
       <figure>
         <img
-          src="https://simona.imgix.net/verona_sunset.jpg"
+          ngSrc="https://simona.imgix.net/verona_sunset.jpg"
           alt="Verona skyline"
+          priority
+          width="800"
+          height="400"
         />
         <figcaption>Sun setting over Verona</figcaption>
       </figure>
@@ -28,7 +31,7 @@ import { Component } from '@angular/core';
           placerat, volutpat sapien et, fringilla est. Etiam at ipsum elementum,
           vulputate massa quis, fermentum odio.
         </p>
-        <img [src]="image.src" [alt]="image.alt" />
+        <img [ngSrc]="image.src" [alt]="image.alt" width="800" height="400" />
       </div>
     </article>
   `,
