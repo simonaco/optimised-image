@@ -1,10 +1,10 @@
-import { NgFor } from '@angular/common';
+import { NgOptimizedImage, NgFor } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [NgFor],
+  imports: [NgOptimizedImage, NgFor],
   template: `
     <article class="post">
       <h2>Lorem Ipsum</h2>
