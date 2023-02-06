@@ -1,17 +1,20 @@
-import { NgFor } from '@angular/common';
+import { NgFor, NgOptimizedImage } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [NgFor],
+  imports: [NgFor, NgOptimizedImage],
   template: `
     <article class="post">
       <h2>Lorem Ipsum</h2>
       <figure>
         <img
-          src="https://best-places.imgix.net/verona_sunset.jpg"
+          ngSrc="/verona_sunset.jpg"
           alt="Verona skyline"
+          priority
+          width="800"
+          height="400"
         />
         <figcaption>Sun setting over Verona</figcaption>
       </figure>
@@ -28,7 +31,7 @@ import { Component } from '@angular/core';
           placerat, volutpat sapien et, fringilla est. Etiam at ipsum elementum,
           vulputate massa quis, fermentum odio.
         </p>
-        <img [src]="image.src" [alt]="image.alt" />
+        <img [ngSrc]="image.src" [alt]="image.alt" width="800" height="400" />
       </div>
     </article>
   `,
@@ -36,23 +39,23 @@ import { Component } from '@angular/core';
 export class AppComponent {
   images = [
     {
-      src: 'https://best-places.imgix.net/amsterdam.jpeg',
+      src: '/amsterdam.jpeg',
       alt: 'Amsterdam bridge',
     },
     {
-      src: 'https://best-places.imgix.net/castelsanpietro.jpeg',
+      src: '/castelsanpietro.jpeg',
       alt: 'Two ducks looking over Catel San Pietro',
     },
     {
-      src: 'https://best-places.imgix.net/teatro_romano.jpeg',
+      src: '/teatro_romano.jpeg',
       alt: 'Teatro romano ruins',
     },
     {
-      src: 'https://best-places.imgix.net/arena_0.jpeg',
+      src: '/arena_0.jpeg',
       alt: 'Arena di Verona with Italian flag projection',
     },
     {
-      src: 'https://best-places.imgix.net/dolomites.jpg',
+      src: '/dolomites.jpg',
       alt: 'Dolomiti mountains covered in snow',
     },
   ];
