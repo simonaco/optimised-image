@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
       <h2>Lorem Ipsum</h2>
       <figure>
         <img
-          src="https://simona.imgix.net/verona_sunset.jpg"
+          src="https://best-places.imgix.net/verona_sunset.jpg"
           alt="Verona skyline"
         />
         <figcaption>Sun setting over Verona</figcaption>
@@ -36,23 +36,23 @@ import { Component } from '@angular/core';
 export class AppComponent {
   images = [
     {
-      src: 'https://simona.imgix.net/verona_sunset_2.jpg',
+      src: 'https://best-places.imgix.net/verona_sunset_2.jpg',
       alt: 'Verona skyline',
     },
     {
-      src: 'https://simona.imgix.net/castelsanpietro.jpeg',
+      src: 'https://best-places.imgix.net/castelsanpietro.jpeg',
       alt: 'Two ducks looking over Catel San Pietro',
     },
     {
-      src: 'https://simona.imgix.net/teatro_romano.jpeg',
+      src: 'https://best-places.imgix.net/teatro_romano.jpeg',
       alt: 'Teatro romano ruins',
     },
     {
-      src: 'https://simona.imgix.net/arena_0.jpeg',
+      src: 'https://best-places.imgix.net/arena_0.jpeg',
       alt: 'Arena di Verona with Italian flag projection',
     },
     {
-      src: 'https://simona.imgix.net/dolomites.jpg',
+      src: 'https://best-places.imgix.net/dolomites.jpg',
       alt: 'Dolomiti mountains covered in snow',
     },
   ];
