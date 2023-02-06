@@ -36,8 +36,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   images = [
     {
-      src: 'https://best-places.imgix.net/verona_sunset_2.jpg',
-      alt: 'Verona skyline',
+      src: 'https://best-places.imgix.net/amsterdam.jpeg',
+      alt: 'Amsterdam bridge',
     },
     {
       src: 'https://best-places.imgix.net/castelsanpietro.jpeg',
