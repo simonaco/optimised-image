@@ -1,19 +1,19 @@
-import { NgFor } from '@angular/common';
+import { NgFor, NgOptimizedImage } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [NgFor],
+  imports: [NgFor, NgOptimizedImage],
   template: `
     <article class="post">
-      <h2>Lorem Ipsum</h2>
+      <h2>Angular Image Directive</h2>
       <figure>
         <img
-          src="https://best-places.imgix.net/verona_sunset.jpg"
-          alt="Verona skyline"
+          ngSrc="/johannes-hofmann-PM5a_R83-YQ-unsplash.jpg"
+          alt="Bernina train in Swiss Alps"
         />
-        <figcaption>Sun setting over Verona</figcaption>
+        <figcaption>Bernina train in Switzerland</figcaption>
       </figure>
       <p>What is Lorem Ipsum?</p>
 
@@ -28,7 +28,7 @@ import { Component } from '@angular/core';
           placerat, volutpat sapien et, fringilla est. Etiam at ipsum elementum,
           vulputate massa quis, fermentum odio.
         </p>
-        <img [src]="image.src" [alt]="image.alt" />
+        <img [ngSrc]="image.src" [alt]="image.alt" width="800" height="400" />
       </div>
     </article>
   `,
@@ -36,24 +36,24 @@ import { Component } from '@angular/core';
 export class AppComponent {
   images = [
     {
-      src: 'https://best-places.imgix.net/amsterdam.jpeg',
-      alt: 'Amsterdam bridge',
+      src: '/aleksandr-popov-I0_UBfHbnkI-unsplash.jpg',
+      alt: 'Train station at sunset',
     },
     {
-      src: 'https://best-places.imgix.net/castelsanpietro.jpeg',
-      alt: 'Two ducks looking over Catel San Pietro',
+      src: '/boris-stromar-qoCZmnwmwe0-unsplash.jpg',
+      alt: 'Train signals at sunset',
     },
     {
-      src: 'https://best-places.imgix.net/teatro_romano.jpeg',
-      alt: 'Teatro romano ruins',
+      src: '/dayso-7o4Du7K6wII-unsplash.jpg',
+      alt: 'Train signal',
     },
     {
-      src: 'https://best-places.imgix.net/arena_0.jpeg',
-      alt: 'Arena di Verona with Italian flag projection',
+      src: '/johannes-hofmann-PM5a_R83-YQ-unsplash.jpg',
+      alt: 'Bernina train in Swiss Alps',
     },
     {
-      src: 'https://best-places.imgix.net/dolomites.jpg',
-      alt: 'Dolomiti mountains covered in snow',
+      src: '/roland-losslein-DmDYX_ltI48-unsplash.jpg',
+      alt: 'Train in Scotland',
     },
   ];
 }
