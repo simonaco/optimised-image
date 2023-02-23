@@ -12,6 +12,8 @@ import { Component } from '@angular/core';
         <img
           ngSrc="/johannes-hofmann-PM5a_R83-YQ-unsplash.jpg"
           alt="Bernina train in Swiss Alps"
+          width="800"
+          height="600"
         />
         <figcaption>Bernina train in Switzerland</figcaption>
       </figure>
